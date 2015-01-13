@@ -23,5 +23,12 @@ Where `someValidatorFn` must throw an error on fail. The validator object specif
 Passing `{debug: true}` as the last arg will cause any object leaves missing validator functions to be logged out.
 
 
+## Validator functions
+There are some example validator functions at </fn.js>
+
+    var fns = require("obj-validator/fns");
+    Object.keys(fns) // => ["required", "length"];
+
+
 ## License
 MIT

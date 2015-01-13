@@ -1,12 +1,19 @@
 var validation = {};
 
 /**
- * Does the value exist?
+ * Value must exist
  */
 validation.required = function(v, k) {
   if(v === undefined) {
     throw new ValidationError("'"+k+"' not defined");
   }
+}
+
+/**
+ * Value is optional
+ */
+validation.optional = function(v, k) {
+  // No-op
 }
 
 /**
