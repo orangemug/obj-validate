@@ -1,4 +1,4 @@
-# obj-validate (work in progress)
+# obj-validate [![Build Status](https://travis-ci.org/orangemug/obj-validate.svg?branch=master)](https://travis-ci.org/orangemug/obj-validate)
 Validate an object
 
     objValidate(obj, validator, opts);
