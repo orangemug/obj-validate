@@ -1,0 +1,27 @@
+{
+  "name": "obj-validate",
+  "description": "Validate an object.",
+  "version": "0.1.0",
+  "config": {
+    "blanket": {
+      "pattern": [
+        "index.js"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  },
+  "devDependencies": {
+    "benchmark": "^1.0.0",
+    "blanket": "^1.1.6",
+    "mocha": "^2.0.1",
+    "mocha-term-cov-reporter": "^0.2.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/index.js",
+    "coverage": "./node_modules/.bin/mocha test/index.js -r blanket -R mocha-term-cov-reporter"
+  },
+  "dependencies": {
+    "obj-by-path": "git://github.com/orangemug/obj-by-path.git",
+    "obj-leaves": "git://github.com/orangemug/obj-leaves.git"
+  }
+}
