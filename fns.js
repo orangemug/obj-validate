@@ -1,5 +1,8 @@
 var validation = {};
 
+/**
+ * Does the value exist?
+ */
 validation.required = function(v, k) {
   if(v === undefined) {
     throw new ValidationError("'"+k+"' not defined");
@@ -7,12 +10,16 @@ validation.required = function(v, k) {
 }
 
 /**
- * opts.min
- * opts.max
+ * Is the values length correct?
+ *
+ * @param opts.min - minimum length (inclusive)
+ * @param opts.max - maximum length (inclusive)
  */
 validation.length = function(opts) {
   return function(v, k) {
-    validation.required(v, k);
+    if(v === undefined) {
+      return;
+    }
 
     var len = v.length;
 
