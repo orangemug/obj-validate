@@ -2,6 +2,7 @@
   "name": "obj-validate",
   "description": "Validate an object.",
   "version": "0.1.0",
+  "main": "./lib/validator.js",
   "config": {
     "blanket": {
       "pattern": [
