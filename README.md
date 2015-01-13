@@ -24,7 +24,7 @@ Passing `{debug: true}` as the last arg will cause any object leaves missing val
 
 
 ## Validator functions
-There are some example validator functions at </fn.js>
+There are some example validator functions at [fn.js](/fn.js)
 
     var fns = require("obj-validator/fns");
     Object.keys(fns) // => ["required", "length"];
