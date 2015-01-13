@@ -44,8 +44,8 @@ describe("obj-by-key", function() {
 
   it("should log missing validations if debug set", function() {
     var msg;
-    var oldLog = console.log;
-    console.log = function(_msg) {
+    var oldWarn = console.warn;
+    console.warn = function(_msg) {
       msg = _msg;
     };
 
@@ -57,7 +57,7 @@ describe("obj-by-key", function() {
       }
     }, {debug: true});
     
-    console.log = oldLog;
+    console.warn = oldWarn;
 
     assert.equal(msg, "Missing validation for foo.bar.notme")
   });
